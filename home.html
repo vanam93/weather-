@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Weather App</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+  *{
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    font-family: 'Quicksand', sans-serif;
+  }
+  body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap: wrap;
+    height:100vh;
+    width:100vw;
+  }
+  html,body{
+    font: size 62.5%;
+    height:100%;
+ 
+}
+
+.box{
+        width:25vw;
+    height:40vh;
+    border-radius:0.5rem;
+    box-shadow:0 0.2rem 3rem rgba(0,0,0,0.2);
+    overflow:hidden;
+    position:absolute;
+    text-align: center;
+    min-width: 15rem;
+    min-height: 20rem;
+   
+}
+
+#weathercon .fas{
+    padding-top:20px;
+      font-size:3rem;
+      animation:fas-anime 3s linear infinite alternate;
+}
+@keyframes fas-anime {
+    form{
+        transform:scale(0.5);
+    }
+    to{
+        transform:scale(1.8);
+    }
+}
+.info{
+    position:absolute;
+      padding-top:2rem;
+     width:100%;
+     height:45%; 
+     display:flex;
+     flex-direction:column;
+     justify-content: center;
+    align-items: center;
+    
+}
+.date{
+    padding-bottom:15px;
+}
+.min_max{
+    padding-top:10px;
+    font-weight:normal;
+}
+
+</style>
+<body>
+    <div class="box">
+      <input type="text" name="name" value="tripura" id="location" placeholder="Enter location"/>
+        <div id="weathercon">
+            <i class="fas fa-sun" style="color:#f1c40f"></i>
+        </div>
+        <div class="info">
+            <h2 class="location">
+                <i class="fas fa-street-view">{%city%},{%country%}</i>
+            </h2>
+            <p  class="date">WED|22/07/2019|4pm</p>
+            <h2 class="temp">{%temp%} C</h2>
+            <h3 class="min_max">MIN {%temp_min%}|MAX {%temp_max%}</h3>
+        </div>
+    
+    </div>
+    <script>
+        const currdate=document.querySelector('.date');
+        currdate.innerHTML=new Date().toLocaleString();
+    </script>
+</body>
+</html>

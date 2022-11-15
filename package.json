@@ -1,0 +1,16 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "creating weather app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vanam gangi reddy",
+  "license": "ISC",
+  "dependencies": {
+    "fahrenheit-to-celsius": "^1.0.0",
+    "kelvin-to-celsius": "^1.1.0",
+    "requests": "^0.3.0"
+  }
+}
